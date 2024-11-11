@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.cdnfonts.com/css/adlam-display" rel="stylesheet">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+   <link rel="stylesheet" href="style-login.css">
+   <title>Cadastro - Edu</title>
+   <style>
+      
+   </style>
+</head>
+
+<body>
+
+   <!-- <?php
+   $nome = $email = $senha = "";
+
+   if ($_SERVER["REQUEST_METHOD"] == "POST") {
+     $nome = test_input($_POST["name"]);
+     $email = test_input($_POST["email"]);
+     $senha = test_input($_POST["website"]);
+   }
+   
+   function test_input($data) {
+     $data = trim($data);
+     $data = stripslashes($data);
+     $data = htmlspecialchars($data);
+     return $data;
+   }
+   ?> -->
+
+   <div class="container">
+      <a href="index.html"><img src="src/logo-edulab.png" alt="logo" width="140" class="hover"></a>
+      <h1> Cadastre-se no Edu </h1>
+      <p>Professor(a), agora você pode criar seus próprios jogos com o EduLab!</p>
+      <div class="login-container">
+         <!-- <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> -->
+         <form action="/login" method="POST">
+            <input type="text" placeholder="Nome de Usuário" name="nome" required><br>
+            <input type="text" placeholder="Email" name="email" required><br>      
+            <input type="password" placeholder="Senha" name="senha" required><br>
+            <button type="submit">Criar conta</button>
+         </form>
+         <p>Já tem uma conta?</p>
+         <button class="register-button" style="margin-bottom:0"><a href="login.html">Fazer Login</a></button>
+      </div>
+   </div>
+
+</body>
+
+</html>
