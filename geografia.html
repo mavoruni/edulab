@@ -2,23 +2,20 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://fonts.cdnfonts.com/css/adlam-display" rel="stylesheet">
-   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/adlam-display" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
    <link rel="icon" type="image/x-icon" href="favicon.ico">
    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
-
-   <link rel="stylesheet" href="style.css">
-   <title>EduLab</title>
+                
+    <link rel="stylesheet" href="style.css">
+    <title>EduLab</title>
 </head>
 
 <body>
-   <video autoplay muted loop id="video">
-      <source src="src/background-video.mp4" type="video/mp4">
-    </video>
    <header id="main-menu">
-      <a href="index.html" class="hover"><img src="src/logo-edulab.png" alt="logo" width="120"></a>
+      <a href="index.html" class="hover"><img src="logo-edulab.png" alt="logo" width="120"></a>
       <div class="box-pesquisa">
          <input type="text" id="pesquisa" placeholder="pesquisar..." />
          <i class='bx bx-search'></i>
@@ -76,16 +73,25 @@
                <a href="#">5° ano</a>
             </div>
          </li>
-        <li>
+         <li class="dropdown">
+            <button class="botao"><a href="geografia.html">Geografia</a></button>
+            <div class="dd-menu">
+               <a href="geografia.html">Tudo</a>
+               <a href="#">3° ano</a>
+               <a href="#">4° ano</a>
+               <a href="#">5° ano</a>
+            </div>
+         </li>
+         <li>
             <button class="botao"><a href="artes.html">Artes</a></button>
          </li>
       </ul>
    </header>
-   <div id="conteiner">
-      <div id="conteudo" class="noMargin">
-         <p class="categoria">Jogos de Português para 1º ao 5º ano</p>
-      </div>
-   </div>
+    <div id="conteiner">
+        <div id="conteudo">
+            <p class="categoria">Jogos de Geografia para 3º ao 5º ano</p>
+        </div>
+    </div>
 
 </body>
 

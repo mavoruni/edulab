@@ -14,6 +14,9 @@
 </head>
 
 <body>
+   <video autoplay muted loop id="video">
+      <source src="src/background-video.mp4" type="video/mp4">
+    </video>
    <header id="main-menu">
       <a href="index.html" class="hover"><img src="src/logo-edulab.png" alt="logo" width="120"></a>
       <div class="box-pesquisa">
@@ -73,21 +76,12 @@
                <a href="#">5° ano</a>
             </div>
          </li>
-         <li class="dropdown">
-            <button class="botao"><a href="geografia.html">Geografia</a></button>
-            <div class="dd-menu">
-               <a href="geografia.html">Tudo</a>
-               <a href="#">3° ano</a>
-               <a href="#">4° ano</a>
-               <a href="#">5° ano</a>
-            </div>
-         </li>
          <li>
             <button class="botao"><a href="artes.html">Artes</a></button>
          </li>
       </ul>
    </header>
-   <div id="conteiner">
+   <div id="conteiner" class="noMargin">
       <div id="conteudo">
          <p class="categoria">Jogos de Informática</p>
       </div>
