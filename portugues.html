@@ -17,18 +17,20 @@
    <video autoplay muted loop id="video">
       <source src="src/background-video.mp4" type="video/mp4">
     </video>
-   <header id="main-menu">
-      <a href="index.html" class="hover"><img src="src/logo-edulab.png" alt="logo" width="120"></a>
+    
+    <header id="main-menu">
+      <a href="index.html" class="hover"><img src="src/logo-edulab.png" alt="logo" width="120" id="edu"></a>
       <div class="box-pesquisa">
          <input type="text" id="pesquisa" placeholder="pesquisar..." />
          <i class='bx bx-search'></i>
       </div>
-      <button id="login">
-         <a href="#">
+      <a href="login.html">
+         <button id="login">
             LOGIN <i class='bx bxs-user-circle'></i>
-         </a>
-      </button>
+         </button>
+      </a>
    </header>
+
    <header id="header2">
       <ul>
          <li>
@@ -76,11 +78,21 @@
                <a href="#">5° ano</a>
             </div>
          </li>
-        <li>
+         <!-- <li class="dropdown">
+            <button class="botao"><a href="geografia.html">Geografia</a></button>
+            <div class="dd-menu">
+               <a href="geografia.html">Tudo</a>
+               <a href="#">3° ano</a>
+               <a href="#">4° ano</a>
+               <a href="#">5° ano</a>
+            </div>
+         </li> -->
+         <li>
             <button class="botao"><a href="artes.html">Artes</a></button>
          </li>
       </ul>
    </header>
+
    <div id="conteiner">
       <div id="conteudo" class="noMargin">
          <p class="categoria">Jogos de Português para 1º ao 5º ano</p>

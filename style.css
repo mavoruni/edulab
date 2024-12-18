@@ -15,8 +15,8 @@ body {
   font-family: "adlam display", sans-serif;
   color: var(--dark);
   display: unset;
+  overflow-x: hidden;
   overflow: visible;
-  scrollbar-color: red yellow;
 }
 
 #video {
@@ -30,23 +30,23 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-   width: 10px;
- }
- 
- /* Track */
- ::-webkit-scrollbar-track {
-   background: white;
- }
- 
- /* Handle */
- ::-webkit-scrollbar-thumb {
-   background: var(--yellow);
- }
- 
- /* Handle on hover */
- ::-webkit-scrollbar-thumb:hover {
-   background: var(--blue);
- }
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+}
 
 button {
   all: unset;
@@ -75,39 +75,44 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 6em;
+  padding: 0 8dvw;
 }
 
 .hover {
-   transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .hover:hover {
-   transform: scale(1.1);
+  transform: scale(1.02);
 }
 
 .box-pesquisa {
-   /* border: 2px solid red; */
-   display: flex;
-   gap: 14px;
+  /* border: 2px solid red; */
+  display: flex;
+  gap: 14px;
 }
 
 .box-pesquisa i {
-   font-weight: bolder;
-   color: var(--red);
-   font-size: 2em;
-
+  font-weight: bolder;
+  color: var(--red);
+  font-size: 2em;
+  /* border: 2px solid blue; */
+  display: flex;
+  align-items: center;
 }
 
 #pesquisa {
   background-color: white;
-  padding: 10px 20px;
-  width: 16em;
+  padding: 6px 14px;
+  width: 32dvw;
   border-radius: 50px;
+  outline: none;
+  border: 4px solid white;
 }
 
 #pesquisa:focus {
-  border: 2px solid red;
+  border: 4px solid var(--red);
+  outline: none;
 }
 
 #pesquisa::placeholder {
@@ -117,16 +122,14 @@ input {
 #login {
   background-color: white;
   color: var(--red);
-  padding: 5px 20px;
+  padding: 8px 20px;
   border-radius: 50px;
   transform: translateY(0);
   /* box-shadow: 0px 4px 0px 4px var(--red); */
   border: 5px solid var(--red);
-}
-
-#login a {
-   display: flex;
-   align-items: center;
+  display: flex;
+  transition: all 0.2s;
+  align-items: center;
 }
 
 #login i {
@@ -139,9 +142,7 @@ input {
   color: white;
   /* box-shadow: 0px 1px 0px 4px var(--red); */
   /* transform: translateY(4px); */
-  transition: all 0.2s;
 }
-
 
 #header2 {
   background-color: var(--lightblue);
@@ -153,39 +154,39 @@ input {
   margin-right: auto;
   height: 6em;
   width: 80vw;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-
-
-  border: 10px solid var(--lightblue);
   border-top: none;
   border-radius: 0 0 50px 50px;
 }
 
 #header2 ul {
+  /* border: 2px solid red; */
+  width: 100%;
   display: flex;
-  gap: 4em;
+  justify-content: space-evenly;
+  /* gap: 4em; */
 }
 
 .botao {
   /* font-weight: bolder; */
-  font-size: 16px;
+  font-size: 20px;
   background-color: white;
-  padding: 10px;
+  padding: 10px 14px;
   border-radius: 50px;
   transform: translateY(0);
+  transition: all 0.2s;
+  cursor: pointer;
   box-shadow: 0px 4px 0px 4px var(--blue);
 }
 
-.botao:hover, .dropdown:hover .botao {
+.botao:hover,
+.dropdown:hover .botao {
   background-color: var(--blue);
   color: white;
   box-shadow: 0px 1px 0px 4px var(--blue);
   transform: translateY(4px);
-  transition: all 0.2s;
 }
 
 .dropdown:hover .dd-menu {
@@ -220,18 +221,18 @@ input {
 }
 
 footer {
-   /* height: 10em; */
-   background-color: var(--red);
-   bottom: 0;
-   color: var(--yellow);
-   font-size: 26px;
-   padding: 2em 4em;
-   display: flex;
-   justify-content: space-between;
+  /* height: 10em; */
+  background-color: var(--red);
+  bottom: 0;
+  color: var(--yellow);
+  font-size: 26px;
+  padding: 2em 4em;
+  display: flex;
+  justify-content: space-between;
 }
 
 footer span:hover {
-   text-decoration: underline;
+  text-decoration: underline;
 }
 
 #conteiner {
@@ -256,10 +257,10 @@ footer span:hover {
 }
 
 .texto {
-   font-family: 'montserrat';
-   font-size: 20px;
-   text-align: justify;
-   padding: 0 2em;
+  font-family: "montserrat";
+  font-size: 20px;
+  text-align: justify;
+  padding: 0 2em;
 }
 
 .categoria {
@@ -270,44 +271,135 @@ footer span:hover {
 }
 
 .box-jogos {
-   display: flex;
-   flex-wrap: wrap;
-   align-items: center;
-   justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .jogo {
-   background-color: lightgray;
-   width: 15em;
-   height: 12em;
-   margin: 24px;
-   display: flex;
+  background-color: lightgray;
+  width: 15em;
+  height: 12em;
+  margin: 24px;
+  display: flex;
 }
 
 .jogo::before {
-   content: 'JOGO';
-   position: absolute;
-   color: gray;
-   font-size: 3em;
-   text-align: center;
+  content: "JOGO";
+  position: absolute;
+  color: gray;
+  font-size: 3em;
+  text-align: center;
 }
 
 .jogo-desc {
-   opacity: 0;
-   overflow: hidden;
-   height: auto;
-   width: 100%;
-   word-wrap: break-word;
-   background-color: var(--dark);
-   font-family: 'montserrat';
-   text-align: center;
-   font-size: 20px;
-   padding: 1em;
-   color: white;
-   transition: opacity 0.2s;
-   z-index: 2;
+  opacity: 0;
+  overflow: hidden;
+  height: auto;
+  width: 100%;
+  word-wrap: break-word;
+  background-color: var(--dark);
+  font-family: "montserrat";
+  text-align: center;
+  font-size: 20px;
+  padding: 1em;
+  color: white;
+  transition: opacity 0.14s;
+  z-index: 2;
 }
 
 .jogo:hover .jogo-desc {
-   opacity: 1;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  #header2 {
+    height: 5em;
+    width: 100dvw;
+    border-radius: 0;
+  }
+
+  .botao {
+    font-size: 18px;
+    padding: 6px 12px;
+    box-shadow: 0px 4px 0px 4px var(--blue);
+  }
+
+  .box-pesquisa {
+    gap: 8px;
+  }
+
+  #main-menu {
+    height: 4.4em;
+    font-size: 22px;
+    padding: 0 28px;
+  }
+
+  #login {
+   padding: 5px 12px;
+ }
+
+  #edu {
+    width: 108px;
+  }
+}
+
+@media (max-width: 720px) {
+  .botao {
+    font-size: 16px;
+    padding: 5px 10px;
+    box-shadow: 0px 2px 0px 2px var(--blue);
+  }
+
+  #header2 ul {
+    height: 100%;
+    align-items: center;
+    overflow-x: scroll;
+    gap: 10px;
+    padding: 0px 16px;
+    scroll-padding: 0;
+    scroll-margin: 0;
+    &::-webkit-scrollbar-thumb {
+      background: var(--blue);
+    }
+    &::-webkit-scrollbar {
+      height: 10px;
+    }
+  }
+
+  #main-menu {
+    font-size: 18px;
+  }
+
+  #edu {
+    width: 85px;
+  }
+
+  #pesquisa {
+    background-color: white;
+    padding: 4px 10px;
+    /* width: 8em; */
+    border-radius: 50px;
+    outline: none;
+    border: 4px solid white;
+  }
+
+  .box-pesquisa i {
+    color: var(--red);
+    font-size: 1.6em;
+    /* border: 2px solid blue; */
+  }
+
+  #login {
+    padding: 4px 12px;
+  }
+
+  #login i {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 576px) {
+}
+@media (max-width: 450px) {
 }
